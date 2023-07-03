@@ -1,5 +1,16 @@
 <template>
+  
   <form class="auth-form">
+    <div class="social-auth">
+      <button>
+        <img src="@/assets/icons/google.svg" alt="google" />
+        Sign In with Google
+      </button>
+      <button>
+        <img src="@/assets/icons/apple.svg" alt="apple" />
+        Sign In with Apple
+      </button>
+    </div>
     <label for="">Email</label>
     <input type="text" name="email" v-model="email" />
     <div class="email-error">
@@ -22,6 +33,7 @@
       <span> ¿No tienes una cuenta? </span>
       <a href="/sign-up"> Regístrate </a>
     </div>
+
   </form>
 </template>
 
@@ -119,5 +131,21 @@ const handleSignIn = (event) => {
 .options {
   display: flex;
   justify-content: center;
+}
+
+.social-auth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.social-auth button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  color: black;
+  background-color: #ccc;
 }
 </style>
