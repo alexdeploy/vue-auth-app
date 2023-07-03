@@ -1,0 +1,22 @@
+{
+    "routes": {
+        "home": {
+            "url": "/"
+        },
+        "auth": {
+            "base": "/auth",
+            "sign_in": {
+                "url": "/sign-in"
+            },
+            "sign_up": {
+                "url": "/sign-up"
+            },
+            "forgot_password": {
+                "url": "/forgot-password"
+            },
+            "reset_password": {
+                "url": "/reset-password"
+            }
+        }
+    }
+}
