@@ -11,13 +11,13 @@
         Sign In with Apple
       </button>
     </div>
-    <label for="">Email</label>
-    <input type="text" name="email" v-model="email" />
+    <label for="email">Email</label>
+    <input type="text" id="email" v-model="email" autocomplete="off"/>
     <div class="email-error">
       <p v-if="emailError">Por favor, ingrese un email válido</p>
     </div>
     <label for="password">Password</label>
-    <input type="password" name="password" v-model="password" />
+    <input type="password" id="password" v-model="password" />
     <div class="password-error">
       <p v-if="passwordError">Por favor, ingrese una contraseña</p>
     </div>
@@ -126,6 +126,12 @@ const handleSignIn = (event) => {
 .auth-form .remember {
   display: flex;
   justify-content: space-between;
+}
+
+.auth-form .password-error, .auth-form .email-error {
+  color: red;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .options {
